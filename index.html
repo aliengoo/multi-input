@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body ng-controller="App" class="container">
+
+<select-date label="Date" date="date"></select-date>
+
+<input type="text" class="form-control" ng-model="date"/>
+
+<pre>{{date}}</pre>
+
+
+<script type="text/ng-template" id="/select-date.html">
+  <div class="form-group">
+    <label class="control-label">{{label}}</label>
+    <div class="form-inline">
+      <select name="day" class="form-control">
+      </select>
+
+      <select name="month" class="form-control">
+      </select>
+      <select name="year" class="form-control"></select>
+    </div>
+  </div>
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>
